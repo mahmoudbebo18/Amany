@@ -29,5 +29,12 @@ $(document).ready(function () {
             )
         });
     }
+    else{
+        $('.wall_wrapper').append(
+            `
+                <strong> There is no messages to show here ..  </strong>
+            `
+        )
+    }
 
 });
