@@ -1,6 +1,23 @@
 /* Fonts */
 
 
+@font-face {
+    font-family: "Cairo-Bold";
+    src: url(../fonts/Cairo-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Cairo-Regular";
+    src: url(../fonts/Cairo-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Cairo-SemiBold";
+    src: url(../fonts/Cairo-SemiBold.ttf);
+    font-weight: 600;
+}
 
 
 
@@ -11,6 +28,11 @@ $textColor: #E6E6E6;
 $primColor: #00BCAF;
 $white: #ffffff;
 
+
+
+$semi: "Cairo-SemiBold";
+$bold: "Cairo-Bold";
+$regular: "Cairo-Regular";
 
 /*global classes */
 
@@ -46,7 +68,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: $bodyBg;
-
+    font-family: $regular;
 
 }
 
@@ -61,10 +83,15 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: $bodyBg;
     z-index: 99999;
-    @media(max-width:767px){
-        padding: 12px 0 ;
+    transition: .3s all ease-in-out;
+
+    &.headerBg {
+        background-color: $bodyBg;
+    }
+
+    @media(max-width:767px) {
+        padding: 12px 0;
     }
 
     nav {
@@ -104,19 +131,24 @@ header {
 
 .send_msg {
     margin-top: 200px;
-    @media(max-width:767px){
+
+    @media(max-width:767px) {
         margin-top: 100px;
     }
+
     form {
         max-width: 460px;
         margin-right: auto;
         margin-left: auto;
         width: 100%;
+
         .form-group {
             margin-bottom: 16px;
-            @media(max-width:767px){
+
+            @media(max-width:767px) {
                 margin-bottom: 8px;
             }
+
             input,
             textarea {
                 width: 100%;
@@ -126,15 +158,18 @@ header {
                 font-size: 24px;
                 border-radius: 20px;
                 color: $textColor;
-                @media(max-width:767px){
+
+                @media(max-width:767px) {
                     font-size: 16px;
                     padding: 12px;
                     border-radius: 12px;
                 }
+
                 &::placeholder {
                     color: $textColor;
                     font-size: 24px;
-                    @media(max-width:767px){
+
+                    @media(max-width:767px) {
                         font-size: 16px;
                     }
                 }
@@ -146,12 +181,14 @@ header {
 
             input {
                 height: 60px;
-                @media(max-width:767px){
+
+                @media(max-width:767px) {
                     height: 45px;
                 }
             }
 
             button {
+                cursor: pointer;
                 background-color: #00BCAF;
                 display: block;
                 width: 240px;
@@ -168,7 +205,8 @@ header {
                 color: $white;
                 font-size: 24px;
                 margin-top: 40px;
-                @media(max-width:767px){
+
+                @media(max-width:767px) {
                     font-size: 16px;
                     padding-inline-start: 55px;
                     margin-top: 24px;
@@ -176,6 +214,7 @@ header {
                     width: 200px;
                     height: 45px;
                 }
+
                 img {
                     position: absolute;
                     right: 0;
@@ -185,7 +224,70 @@ header {
             }
         }
     }
-    .message_bg{
+
+    .message_bg {
         width: 100%;
+    }
+}
+
+
+
+/*display_wall*/
+
+
+.display_wall {
+    position: relative;
+   
+    .wall_bg {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+    }
+    .wall_wrapper {
+        padding-top: 200px;
+        position: relative;
+        z-index: 10;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        height: 1080px;
+        overflow-y: auto;
+        @media(max-width:991px){
+            height: 100vh;
+            padding-bottom: 16px;
+        }
+        @media(max-width:767px) {
+            padding-top: 100px;
+        }
+        @media(max-width:575px){
+            gap: 12px;
+        }
+
+        .item {
+            flex-basis: calc((100% / 3) - 20px);
+            background-color: $white;
+            border-radius: 12px;
+            box-shadow: 0 0 22px #ccc;
+            padding: 16px;
+            @media(max-width:1080px){
+                flex-basis: calc((100% / 2) - 15px);
+            }
+            @media(max-width:575px){
+                flex-basis: 100%
+            }
+            p {
+                margin: 0;
+            }
+
+            h5 {
+                margin: 0;
+                font-style: italic;
+                color: $textColor;
+                font-family: $bold;
+                font-size: 16px;
+            }
+        }
     }
 }

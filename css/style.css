@@ -1,4 +1,19 @@
 /* Fonts */
+@font-face {
+  font-family: "Cairo-Bold";
+  src: url(../fonts/Cairo-Bold.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: "Cairo-Regular";
+  src: url(../fonts/Cairo-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Cairo-SemiBold";
+  src: url(../fonts/Cairo-SemiBold.ttf);
+  font-weight: 600;
+}
 /*color variables */
 /*global classes */
 .container {
@@ -38,6 +53,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #E6E7E8;
+  font-family: "Cairo-Regular";
 }
 
 * {
@@ -50,8 +66,11 @@ header {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #E6E7E8;
   z-index: 99999;
+  transition: 0.3s all ease-in-out;
+}
+header.headerBg {
+  background-color: #E6E7E8;
 }
 @media (max-width: 767px) {
   header {
@@ -161,6 +180,7 @@ header nav a img {
   }
 }
 .send_msg form .form-group button {
+  cursor: pointer;
   background-color: #00BCAF;
   display: block;
   width: 240px;
@@ -196,4 +216,69 @@ header nav a img {
 }
 .send_msg .message_bg {
   width: 100%;
+}
+
+/*display_wall*/
+.display_wall {
+  position: relative;
+}
+.display_wall .wall_bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+.display_wall .wall_wrapper {
+  padding-top: 200px;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  height: 1080px;
+  overflow-y: auto;
+}
+@media (max-width: 991px) {
+  .display_wall .wall_wrapper {
+    height: 100vh;
+    padding-bottom: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .display_wall .wall_wrapper {
+    padding-top: 100px;
+  }
+}
+@media (max-width: 575px) {
+  .display_wall .wall_wrapper {
+    gap: 12px;
+  }
+}
+.display_wall .wall_wrapper .item {
+  flex-basis: calc(33.3333333333% - 20px);
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 0 22px #ccc;
+  padding: 16px;
+}
+@media (max-width: 1080px) {
+  .display_wall .wall_wrapper .item {
+    flex-basis: calc(50% - 15px);
+  }
+}
+@media (max-width: 575px) {
+  .display_wall .wall_wrapper .item {
+    flex-basis: 100%;
+  }
+}
+.display_wall .wall_wrapper .item p {
+  margin: 0;
+}
+.display_wall .wall_wrapper .item h5 {
+  margin: 0;
+  font-style: italic;
+  color: #E6E6E6;
+  font-family: "Cairo-Bold";
+  font-size: 16px;
 }/*# sourceMappingURL=style.css.map */

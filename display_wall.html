@@ -26,35 +26,21 @@
             </nav>
         </div>
     </header>
-
-    <section class="send_msg">
+    
+    <section class="display_wall">
+        <img class="wall_bg" src="images/wall_bg.png" alt="wall BG" />
         <div class="container">
-            <form id="message_form">
-                <div class="form-group">
-                    <textarea required placeholder="Your message" name="message"></textarea>
-                </div>
-                <div class="form-group">
-                    <input required name="name" placeholder="Name" type="text" />
-                </div>
-                <div class="form-group">
-                    <button type="submit">
-                        <span> Send </span>
-                        <img src="images/message_btn.png" alt="">
-                    </button>
-                </div>
-            </form>
+
+            <div class="wall_wrapper"> 
+                    <!--Messages will appears here   -->
+            </div>
         </div>
-        <img class="message_bg" src="images/send_message_bg.png" alt="">
     </section>
 
 
-
-    <!-- Scripts  -->
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/messages.js"></script>
-
-
 </body>
 
 </html>
