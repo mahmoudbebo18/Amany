@@ -29,7 +29,7 @@ $(document).ready(function () {
             )
         });
     }
-    else{
+    else {
         $('.wall_wrapper').append(
             `
                 <strong> There is no messages to show here ..  </strong>
@@ -38,3 +38,25 @@ $(document).ready(function () {
     }
 
 });
+
+
+function scrollWindow() {
+    const scrollAmount = 20; // Adjust the scrolling speed as needed
+
+    // Scroll down
+    window.scroll({
+        top: window.scrollY + scrollAmount,
+        behavior: "smooth",
+    });
+
+    // If at the bottom, reset to the top
+    if (window.innerHeight + window.scrollY >= document.body.scrollHeight) {
+        setTimeout(() => {
+            window.scrollTo(0, 0);
+        }, 4000); // Scroll to top after 2 seconds
+    }
+}
+
+// Call the scrollWindow function every 2 seconds
+setInterval(scrollWindow, 2000);
+
