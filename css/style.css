@@ -244,23 +244,30 @@ header nav a img {
   }
 }
 .display_wall .wall_wrapper {
-  padding-top: 200px;
+  margin-top: 200px;
   position: relative;
   z-index: 10;
+  height: 500px;
+  overflow: hidden;
+}
+.display_wall .wall_wrapper .wall_container {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
   direction: rtl;
   text-align: start;
+  animation: scrollMessages 10s linear infinite;
+}
+@media (max-width: 575px) {
+  .display_wall .wall_wrapper .wall_container {
+    -moz-column-gap: 12px;
+         column-gap: 12px;
+  }
 }
 @media (max-width: 767px) {
   .display_wall .wall_wrapper {
-    padding-top: 100px;
-  }
-}
-@media (max-width: 575px) {
-  .display_wall .wall_wrapper {
-    gap: 12px;
+    margin-top: 100px;
   }
 }
 .display_wall .wall_wrapper .item {
@@ -269,6 +276,7 @@ header nav a img {
   border-radius: 12px;
   box-shadow: 0 0 22px #ccc;
   padding: 16px;
+  margin-bottom: 30px;
 }
 @media (max-width: 1080px) {
   .display_wall .wall_wrapper .item {
@@ -278,6 +286,7 @@ header nav a img {
 @media (max-width: 575px) {
   .display_wall .wall_wrapper .item {
     flex-basis: 100%;
+    margin-bottom: 12px;
   }
 }
 .display_wall .wall_wrapper .item p {
@@ -289,4 +298,13 @@ header nav a img {
   color: #E6E6E6;
   font-family: "Cairo-Bold";
   font-size: 16px;
+}
+
+@keyframes scrollMessages {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
 }/*# sourceMappingURL=style.css.map */

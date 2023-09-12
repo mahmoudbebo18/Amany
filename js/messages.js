@@ -19,7 +19,7 @@ $(document).ready(function () {
     const messageDataArray = JSON.parse(localStorage.getItem("messageDataArray"));
     if (messageDataArray && messageDataArray.length > 0) {
         $.each(messageDataArray, function (index, messageData) {
-            $('.wall_wrapper').append(
+            $('.wall_container').append(
                 `
                 <div class="item">
                     <p class="msg_content"> ${messageData.message} </p>
