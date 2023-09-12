@@ -273,9 +273,13 @@ header {
             column-gap: 30px;
             direction: rtl;
             text-align: start;
-            animation: scrollMessages 10s linear infinite;
+            animation: scrollMessages 30s linear infinite;
+            @media(max-width:1080px) {
+                animation: scrollMessages 80s linear infinite;
+            }
             @media(max-width:575px) {
                 column-gap: 12px;
+                animation: scrollMessages 150s linear infinite;
             }
         }
 
