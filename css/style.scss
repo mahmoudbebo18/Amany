@@ -284,7 +284,7 @@ header {
             animation: scrollMessages 30s linear infinite;
 
             @media(max-width:1080px) {
-                animation: scrollMessages 80s linear infinite;
+                animation: scrollMessages 40s linear infinite;
             }
         }
 
@@ -335,6 +335,6 @@ header {
     }
 
     100% {
-        transform: translateY(-100%);
+        transform: translateY(-50%);
     }
 }
