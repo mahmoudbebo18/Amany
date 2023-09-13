@@ -234,8 +234,12 @@ header nav a img {
   height: 100%;
 }
 .display_wall .container {
-  height: 1080px;
+  height: 100vh;
   overflow-y: auto;
+}
+.display_wall .container::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
 }
 @media (max-width: 991px) {
   .display_wall .container {
@@ -244,11 +248,15 @@ header nav a img {
   }
 }
 .display_wall .wall_wrapper {
-  margin-top: 200px;
+  margin-top: 140px;
   position: relative;
   z-index: 10;
-  height: 500px;
+  height: 100vh;
   overflow: hidden;
+}
+.display_wall .wall_wrapper::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
 }
 .display_wall .wall_wrapper .wall_container {
   display: flex;
@@ -264,13 +272,6 @@ header nav a img {
     animation: scrollMessages 80s linear infinite;
   }
 }
-@media (max-width: 575px) {
-  .display_wall .wall_wrapper .wall_container {
-    -moz-column-gap: 12px;
-         column-gap: 12px;
-    animation: scrollMessages 150s linear infinite;
-  }
-}
 @media (max-width: 767px) {
   .display_wall .wall_wrapper {
     margin-top: 100px;
@@ -280,7 +281,7 @@ header nav a img {
   flex-basis: calc(33.3333333333% - 20px);
   background-color: #ffffff;
   border-radius: 12px;
-  box-shadow: 0 0 22px #ccc;
+  box-shadow: 0 0 10px #ccc;
   padding: 16px;
   margin-bottom: 30px;
 }

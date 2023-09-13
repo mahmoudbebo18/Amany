@@ -251,9 +251,12 @@ header {
     }
 
     .container {
-        height: 1080px;
+        height: 100vh;
         overflow-y: auto;
-
+        &::-webkit-scrollbar {
+            width: 0;
+            background: transparent;
+        }
         @media(max-width:991px) {
             height: 100vh;
             padding-bottom: 16px;
@@ -261,11 +264,16 @@ header {
     }
 
     .wall_wrapper {
-        margin-top: 200px;
+        margin-top: 140px;
         position: relative;
         z-index: 10;
-        height: 500px;
+        height: 100vh;
         overflow: hidden;
+
+        &::-webkit-scrollbar {
+            width: 0;
+            background: transparent;
+        }
 
         .wall_container {
             display: flex;
@@ -274,12 +282,9 @@ header {
             direction: rtl;
             text-align: start;
             animation: scrollMessages 30s linear infinite;
+
             @media(max-width:1080px) {
                 animation: scrollMessages 80s linear infinite;
-            }
-            @media(max-width:575px) {
-                column-gap: 12px;
-                animation: scrollMessages 150s linear infinite;
             }
         }
 
@@ -287,25 +292,29 @@ header {
             margin-top: 100px;
         }
 
-       
+
 
         .item {
             flex-basis: calc((100% / 3) - 20px);
             background-color: $white;
             border-radius: 12px;
-            box-shadow: 0 0 22px #ccc;
+            box-shadow: 0 0 10px #ccc;
             padding: 16px;
             margin-bottom: 30px;
+
             @media(max-width:1080px) {
                 flex-basis: calc((100% / 2) - 15px);
             }
+
             @media(max-width:575px) {
                 flex-basis: 100%;
                 margin-bottom: 12px;
             }
+
             p {
                 margin: 0;
             }
+
             h5 {
                 margin: 0;
                 font-style: italic;
