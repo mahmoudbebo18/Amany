@@ -17,6 +17,20 @@ $(document).ready(function () {
 
     // display the stored data 
     const messageDataArray = JSON.parse(localStorage.getItem("messageDataArray"));
+    if(messageDataArray &&  messageDataArray.length > 6){
+        $('.wall_wrapper').addClass('wrapper_height')
+    }
+    while (messageDataArray.length > 6 && messageDataArray.length % 3 !== 0) {
+        const lastElement = messageDataArray[messageDataArray.length - 1];
+        messageDataArray.push(lastElement);
+    }
+    if (messageDataArray && messageDataArray.length >= 0 && messageDataArray.length < 6) {
+        $('.duplicate').hide();
+    }
+    else {
+        $('.duplicate').show();
+    }
+
     if (messageDataArray && messageDataArray.length > 0) {
         $.each(messageDataArray, function (index, messageData) {
             $('.wall_container').append(
@@ -36,6 +50,10 @@ $(document).ready(function () {
             `
         )
     }
+
+
+
+
 
 });
 
