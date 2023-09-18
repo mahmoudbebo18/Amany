@@ -117,8 +117,7 @@ header nav a img {
 }
 @media (max-width: 767px) {
   header nav a img {
-    height: 45px;
-    width: 125px;
+    height: 42px;
   }
 }
 header nav a img.no_filter {
@@ -129,8 +128,27 @@ header nav a img.no_filter {
     display: none;
   }
 }
+header nav a.resize_wrapper {
+  display: block;
+}
 header.feeling_header nav img {
   filter: grayscale(100%) brightness(1000%);
+}
+header.feeling_header nav .img_resize {
+  width: 112px;
+  height: 72px;
+}
+@media (max-width: 1200px) {
+  header.feeling_header nav .img_resize {
+    width: 102px;
+    height: 62px;
+  }
+}
+@media (max-width: 767px) {
+  header.feeling_header nav .img_resize {
+    width: 72px;
+    height: 42px;
+  }
 }
 
 .send_msg form {
