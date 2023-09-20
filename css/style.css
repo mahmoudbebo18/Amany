@@ -85,6 +85,7 @@ header {
   z-index: 99999;
   transition: 0.3s all ease-in-out;
   direction: ltr;
+  background-color: #E6E7E8;
 }
 header.headerBg {
   background-color: #E6E7E8;
@@ -104,6 +105,11 @@ header nav a {
 }
 header nav a img {
   height: 82px;
+}
+@media (min-width: 1920px) {
+  header nav a img {
+    height: 150px;
+  }
 }
 @media (max-width: 1400px) {
   header nav a img {
@@ -249,6 +255,47 @@ header.feeling_header nav .img_resize {
   top: 0;
   height: 100%;
 }
+@media (min-width: 1920px) {
+  .send_msg form {
+    max-width: 1200px;
+    margin-top: 150px;
+  }
+  .send_msg form .form-group {
+    margin-bottom: 40px;
+  }
+  .send_msg form .form-group textarea {
+    height: 400px;
+    font-size: 70px;
+  }
+  .send_msg form .form-group textarea::-moz-placeholder {
+    font-size: 70px;
+  }
+  .send_msg form .form-group textarea::placeholder {
+    font-size: 70px;
+  }
+  .send_msg form .form-group input {
+    height: 150px;
+    font-size: 70px;
+  }
+  .send_msg form .form-group input::-moz-placeholder {
+    font-size: 70px;
+  }
+  .send_msg form .form-group input::placeholder {
+    font-size: 70px;
+  }
+  .send_msg form .form-group button {
+    font-size: 70px;
+    width: 60%;
+    height: 150px;
+    overflow: hidden;
+  }
+  .send_msg form .form-group button img {
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    height: 106%;
+  }
+}
 .send_msg .message_bg {
   width: 100%;
 }
@@ -319,6 +366,11 @@ header.feeling_header nav .img_resize {
 .display_wall .wall_wrapper .item p {
   margin: 0;
 }
+@media (min-width: 1920px) {
+  .display_wall .wall_wrapper .item p {
+    font-size: 50px;
+  }
+}
 .display_wall .wall_wrapper .item h5 {
   margin: 0;
   font-style: italic;
@@ -326,8 +378,18 @@ header.feeling_header nav .img_resize {
   font-family: "LyonArabicTextTT-Bold";
   font-size: 16px;
 }
+@media (min-width: 1920px) {
+  .display_wall .wall_wrapper .item h5 {
+    font-size: 50px;
+  }
+}
 .display_wall .wall_wrapper.wrapper_height {
   height: 75vh;
+}
+@media (min-width: 1920px) {
+  .display_wall .wall_wrapper.wrapper_height {
+    height: 25vh;
+  }
 }
 .display_wall .wall_wrapper.wrapper_height .wall_container {
   animation: scrollMessages 10s linear infinite;
@@ -407,6 +469,11 @@ header.feeling_header nav .img_resize {
 .display_wall .feelings_wrapper .item p {
   margin: 0;
 }
+@media (min-width: 1920px) {
+  .display_wall .feelings_wrapper .item p {
+    font-size: 50px;
+  }
+}
 .display_wall .feelings_wrapper .item h5 {
   margin: 0;
   font-style: italic;
@@ -414,8 +481,18 @@ header.feeling_header nav .img_resize {
   font-family: "LyonArabicTextTT-Bold";
   font-size: 16px;
 }
+@media (min-width: 1920px) {
+  .display_wall .feelings_wrapper .item h5 {
+    font-size: 50px;
+  }
+}
 .display_wall .feelings_wrapper.wrapper_height {
   height: 75vh;
+}
+@media (min-width: 1920px) {
+  .display_wall .feelings_wrapper.wrapper_height {
+    height: 25vh;
+  }
 }
 .display_wall .feelings_wrapper.wrapper_height .feelings_container {
   animation: scrollMessages 10s linear infinite;
@@ -471,6 +548,11 @@ header.feeling_header nav .img_resize {
   font-size: 45px;
   text-align: center;
   margin: 8px 0 0 0;
+}
+@media (min-width: 1920px) {
+  .qr_section .qr_wrapper h2 {
+    font-size: 70px;
+  }
 }
 @media (max-width: 767px) {
   .qr_section .qr_wrapper h2 {
