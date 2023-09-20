@@ -102,7 +102,6 @@ header {
     z-index: 99999;
     transition: .3s all ease-in-out;
     direction: ltr;
-    background-color: $bodyBg;
     &.headerBg {
         background-color: $bodyBg;
     }

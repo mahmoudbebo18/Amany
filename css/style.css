@@ -85,7 +85,6 @@ header {
   z-index: 99999;
   transition: 0.3s all ease-in-out;
   direction: ltr;
-  background-color: #E6E7E8;
 }
 header.headerBg {
   background-color: #E6E7E8;
