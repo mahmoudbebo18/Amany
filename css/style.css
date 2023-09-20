@@ -64,7 +64,7 @@ body {
 }
 
 body {
-  padding-top: 140px;
+  padding-top: 270px;
 }
 @media (max-width: 767px) {
   body {
@@ -387,7 +387,7 @@ header.feeling_header nav .img_resize {
 }
 @media (min-width: 1920px) {
   .display_wall .wall_wrapper.wrapper_height {
-    height: 25vh;
+    height: 35vh;
   }
 }
 .display_wall .wall_wrapper.wrapper_height .wall_container {
@@ -490,7 +490,7 @@ header.feeling_header nav .img_resize {
 }
 @media (min-width: 1920px) {
   .display_wall .feelings_wrapper.wrapper_height {
-    height: 25vh;
+    height: 35vh;
   }
 }
 .display_wall .feelings_wrapper.wrapper_height .feelings_container {
